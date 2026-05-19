@@ -1,0 +1,22 @@
+{
+  "name": "@mini-exchange/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "base.js",
+    "next.js",
+    "react.js"
+  ],
+  "scripts": {
+    "lint": "echo \"skip lint: eslint-config\"",
+    "typecheck": "echo \"skip typecheck: eslint-config\"",
+    "test": "echo \"skip test: eslint-config\"",
+    "build": "echo \"skip build: eslint-config\"",
+    "clean": "echo \"skip clean: eslint-config\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "typescript-eslint": "^8.0.0"
+  }
+}

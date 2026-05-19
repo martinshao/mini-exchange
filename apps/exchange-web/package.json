@@ -1,0 +1,40 @@
+{
+  "name": "@mini-exchange/exchange-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "clean": "rm -rf .next dist coverage"
+  },
+  "dependencies": {
+    "@mini-exchange/api-client": "workspace:*",
+    "@mini-exchange/config": "workspace:*",
+    "@mini-exchange/domain-account": "workspace:*",
+    "@mini-exchange/domain-futures": "workspace:*",
+    "@mini-exchange/domain-market": "workspace:*",
+    "@mini-exchange/domain-risk": "workspace:*",
+    "@mini-exchange/domain-spot": "workspace:*",
+    "@mini-exchange/domain-wallet": "workspace:*",
+    "@mini-exchange/layout": "workspace:*",
+    "@mini-exchange/trading-types": "workspace:*",
+    "@mini-exchange/ui": "workspace:*",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@mini-exchange/tsconfig": "workspace:*",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

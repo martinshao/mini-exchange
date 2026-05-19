@@ -1,0 +1,4 @@
+{
+  "extends": "@mini-exchange/tsconfig/react-library.json",
+  "include": ["src"]
+}

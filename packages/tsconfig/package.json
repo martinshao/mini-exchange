@@ -1,0 +1,22 @@
+{
+  "name": "@mini-exchange/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.json",
+    "next.json",
+    "react-library.json"
+  ],
+  "exports": {
+    "./base.json": "./base.json",
+    "./next.json": "./next.json",
+    "./react-library.json": "./react-library.json"
+  },
+  "scripts": {
+    "lint": "echo \"skip lint: tsconfig\"",
+    "typecheck": "echo \"skip typecheck: tsconfig\"",
+    "test": "echo \"skip test: tsconfig\"",
+    "build": "echo \"skip build: tsconfig\"",
+    "clean": "echo \"skip clean: tsconfig\""
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "mini-exchange",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.1.2",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.8.0",
+    "eslint": "^10.4.0",
+    "prettier": "^3.8.3",
+    "turbo": "^2.9.14",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.3",
+    "vitest": "^4.1.6"
+  }
+}

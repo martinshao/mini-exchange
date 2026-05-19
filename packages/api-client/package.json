@@ -1,0 +1,21 @@
+{
+  "name": "@mini-exchange/api-client",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "echo \"skip build: api-client\"",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "clean": "rm -rf dist coverage"
+  },
+  "dependencies": {
+    "@mini-exchange/trading-types": "workspace:*"
+  },
+  "devDependencies": {
+    "@mini-exchange/tsconfig": "workspace:*"
+  }
+}
