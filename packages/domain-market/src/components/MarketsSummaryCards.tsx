@@ -3,19 +3,19 @@ import { marketsLeaderboards } from '../constants/markets-mock-data';
 
 export function MarketsSummaryCards() {
   return (
-    <section className="grid gap-4 lg:grid-cols-4">
+    <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       {marketsLeaderboards.map((board) => (
         <Card
           key={board.title}
-          className="border-slate-800 bg-[#10141c] px-5 py-4"
+          className="min-h-[176px] rounded-[22px] border-[#2a313d] bg-[#11151b] px-7 py-6"
         >
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-sm font-semibold text-slate-300">
+          <div className="mb-5 flex items-center justify-between">
+            <h2 className="text-base font-semibold text-slate-200">
               {board.title}
             </h2>
             <a
               href={board.href}
-              className="text-xs font-medium text-slate-400 hover:text-yellow-300"
+              className="text-base font-semibold text-slate-300 transition hover:text-yellow-300"
             >
               更多 &gt;
             </a>
@@ -29,28 +29,28 @@ export function MarketsSummaryCards() {
                 <a
                   key={`${board.title}-${item.symbol}`}
                   href="/spot/trade/BTCUSDT"
-                  className="grid grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-4 text-sm"
+                  className="grid grid-cols-[minmax(0,1fr)_minmax(86px,auto)_minmax(76px,auto)] items-center gap-4 text-base"
                 >
                   <span className="flex min-w-0 items-center gap-3">
                     <span
                       className={[
-                        'flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold',
+                        'flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold',
                         item.iconClassName
                       ].join(' ')}
                     >
                       {item.symbol.slice(0, 1)}
                     </span>
-                    <span className="truncate font-semibold text-slate-200">
+                    <span className="truncate text-lg font-semibold text-slate-200">
                       {item.symbol}
                     </span>
                   </span>
 
-                  <span className="font-medium text-slate-300">
+                  <span className="whitespace-nowrap text-lg font-medium text-slate-200">
                     {item.price}
                   </span>
                   <span
                     className={[
-                      'text-right font-semibold',
+                      'whitespace-nowrap text-right text-lg font-semibold',
                       isPositive ? 'text-emerald-400' : 'text-red-400'
                     ].join(' ')}
                   >
