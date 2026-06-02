@@ -4,7 +4,7 @@ export type MarketsTabKey =
   | 'ai-select'
   | 'token-unlock';
 
-export type MarketsSecondaryTabKey =
+export type MarketsAssetTabKey =
   | 'watchlist'
   | 'coins'
   | 'spot'

@@ -1,24 +1,24 @@
 import {
-  marketsCategoryTabs,
-  marketsSecondaryTabs
+  marketsAssetCategoryTabs,
+  marketsAssetTabs
 } from '../constants/markets-navigation';
-import type { MarketsSecondaryTabKey } from '../types/markets';
+import type { MarketsAssetTabKey } from '../types/markets';
 
-export function MarketsCategoryTabs({
+export function MarketsAssetTabs({
   activeKey = 'coins'
 }: {
-  activeKey?: MarketsSecondaryTabKey;
+  activeKey?: MarketsAssetTabKey;
 }) {
   return (
     <div className="space-y-6">
       <nav className="flex gap-6 overflow-x-auto">
-        {marketsSecondaryTabs.map((item) => {
+        {marketsAssetTabs.map((item) => {
           const isActive = item.key === activeKey;
 
           return (
-            <button
+            <a
               key={item.key}
-              type="button"
+              href={item.href}
               className={[
                 'relative shrink-0 pb-2 text-base font-semibold transition',
                 isActive
@@ -32,13 +32,13 @@ export function MarketsCategoryTabs({
                 </span>
               ) : null}
               {item.label}
-            </button>
+            </a>
           );
         })}
       </nav>
 
       <nav className="flex items-center gap-5 overflow-x-auto">
-        {marketsCategoryTabs.map((item, index) => (
+        {marketsAssetCategoryTabs.map((item, index) => (
           <button
             key={item}
             type="button"

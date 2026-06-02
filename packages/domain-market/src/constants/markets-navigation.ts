@@ -1,4 +1,4 @@
-import type { MarketsSecondaryTabKey, MarketsTabKey } from '../types/markets';
+import type { MarketsAssetTabKey, MarketsTabKey } from '../types/markets';
 
 export const marketsTabs: Array<{
   key: MarketsTabKey;
@@ -27,47 +27,56 @@ export const marketsTabs: Array<{
   }
 ];
 
-export const marketsSecondaryTabs: Array<{
-  key: MarketsSecondaryTabKey;
+export const marketsAssetTabs: Array<{
+  key: MarketsAssetTabKey;
   label: string;
+  href: string;
   badge?: string;
 }> = [
   {
     key: 'watchlist',
-    label: '自选'
+    label: '自选',
+    href: '/markets/favorite-all'
   },
   {
     key: 'coins',
-    label: '币种'
+    label: '币种',
+    href: '/markets/overview'
   },
   {
     key: 'spot',
-    label: '现货'
+    label: '现货',
+    href: '/markets/spot_margin-USDT'
   },
   {
     key: 'futures',
-    label: '合约'
+    label: '合约',
+    href: '/markets/futures-perpetual'
   },
   {
     key: 'tradfi',
     label: 'TradFi',
+    href: '/markets/tradfi-Futures',
     badge: '新上线'
   },
   {
     key: 'alpha',
-    label: 'Alpha'
+    label: 'Alpha',
+    href: '/markets/alpha-all'
   },
   {
     key: 'new-listings',
-    label: '新币榜'
+    label: '新币榜',
+    href: '/markets/newListing'
   },
   {
     key: 'sectors',
-    label: '板块'
+    label: '板块',
+    href: '/markets/zones'
   }
 ];
 
-export const marketsCategoryTabs = [
+export const marketsAssetCategoryTabs = [
   '全部',
   'BNB Chain',
   'Solana',
