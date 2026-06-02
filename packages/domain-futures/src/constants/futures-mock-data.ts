@@ -10,15 +10,15 @@ import type {
 } from '../types';
 
 export const mockFuturesTickerStrip: FuturesTicker[] = [
-  { symbol: 'PRLUSDT', change: '+2.97%' },
-  { symbol: 'BSBUSDT', change: '-8.56%' },
-  { symbol: 'EVAAUSDT', change: '-4.54%' },
-  { symbol: 'BTCUSDT', change: '-5.02%' },
-  { symbol: 'ETHUSDT', change: '-1.45%' },
-  { symbol: 'RAVEUSDT', change: '-6.96%' },
-  { symbol: 'STOUSDT', change: '-1.15%' },
-  { symbol: 'HYPEUSDT', change: '+1.49%' },
-  { symbol: 'NEARUSDT', change: '+9.41%' }
+  { symbol: 'PRLUSDT', price: '0.2048', change: '+2.97%' },
+  { symbol: 'BSBUSDT', price: '0.2627', change: '-8.56%' },
+  { symbol: 'EVAAUSDT', price: '0.3961', change: '-4.54%' },
+  { symbol: 'BTCUSDT', price: '104,280.0', change: '-5.02%' },
+  { symbol: 'ETHUSDT', price: '1,939.02', change: '-1.45%' },
+  { symbol: 'RAVEUSDT', price: '0.4401', change: '-6.96%' },
+  { symbol: 'STOUSDT', price: '0.2215', change: '-1.15%' },
+  { symbol: 'HYPEUSDT', price: '36.72', change: '+1.49%' },
+  { symbol: 'NEARUSDT', price: '2.614', change: '+9.41%' }
 ];
 
 export const mockFuturesInstrument: FuturesInstrument = {
@@ -30,7 +30,11 @@ export const mockFuturesInstrument: FuturesInstrument = {
   stats: [
     { label: '标记价格', value: '1,939.16' },
     { label: '指数价格', value: '1,940.15' },
-    { label: '资金费率 (8h)/倒计时', value: '0.0066% / 00:59:32' },
+    {
+      label: '资金费率 (8h)/倒计时',
+      value: '0.0066% / 00:59:32',
+      tone: 'warning'
+    },
     { label: '24h最高价', value: '2,009.42' },
     { label: '24h最低价', value: '1,924.00' },
     { label: '24h成交量(ETH)', value: '5,354,696.381' },

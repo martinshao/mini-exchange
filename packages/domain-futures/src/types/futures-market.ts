@@ -1,11 +1,13 @@
 export type FuturesTicker = {
   symbol: string;
+  price: string;
   change: string;
 };
 
 export type FuturesInstrumentStat = {
   label: string;
   value: string;
+  tone?: 'default' | 'positive' | 'negative' | 'warning';
 };
 
 export type FuturesInstrument = {
