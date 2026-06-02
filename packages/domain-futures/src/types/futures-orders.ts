@@ -10,8 +10,13 @@ export type FuturesOrderEntryState = {
   positionSide: FuturesPositionSide;
   orderType: FuturesOrderType;
   availableBalance: string;
+  price: string;
+  quantity: string;
+  quantityUnit: string;
   pricePlaceholder: string;
   quantityPlaceholder: string;
+  reduceOnly: boolean;
+  stopLossTakeProfit: boolean;
 };
 
 export type FuturesOpenOrder = {
@@ -21,5 +26,6 @@ export type FuturesOpenOrder = {
   price: string;
   quantity: string;
   filled: string;
+  reduceOnly: boolean;
   status: string;
 };

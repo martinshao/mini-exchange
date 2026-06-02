@@ -1,5 +1,6 @@
 import type {
   FuturesAccountSummary,
+  FuturesAssetBalance,
   FuturesBottomTab,
   FuturesChartMockState,
   FuturesInstrument,
@@ -116,8 +117,13 @@ export const mockFuturesOrderEntry: FuturesOrderEntryState = {
   positionSide: 'long',
   orderType: 'limit',
   availableBalance: '4,761.12 USDT',
+  price: '1,939.02',
+  quantity: '0.00',
+  quantityUnit: 'USDT',
   pricePlaceholder: '委托价格',
-  quantityPlaceholder: '数量'
+  quantityPlaceholder: '数量',
+  reduceOnly: false,
+  stopLossTakeProfit: true
 };
 
 export const mockFuturesAccountSummary: FuturesAccountSummary = {
@@ -140,7 +146,9 @@ export const mockFuturesPositions: FuturesPosition[] = [
     marginRatio: '6.07%',
     margin: '187.14 USDT',
     pnl: '-128.43 USDT',
-    roe: '-64.22%'
+    roe: '-64.22%',
+    autoDeleverage: '!!!!',
+    estimatedFundingFee: '-0.11 USDT'
   },
   {
     symbol: 'FOLKSUSDT',
@@ -153,7 +161,9 @@ export const mockFuturesPositions: FuturesPosition[] = [
     marginRatio: '6.07%',
     margin: '18.49 USDT',
     pnl: '-14.70 USDT',
-    roe: '-73.56%'
+    roe: '-73.56%',
+    autoDeleverage: '!!!',
+    estimatedFundingFee: '0.00 USDT'
   }
 ];
 
@@ -165,7 +175,17 @@ export const mockFuturesOpenOrders: FuturesOpenOrder[] = [
     price: '1,920.00',
     quantity: '0.50 ETH',
     filled: '0%',
+    reduceOnly: false,
     status: 'open'
+  }
+];
+
+export const mockFuturesAssets: FuturesAssetBalance[] = [
+  {
+    asset: 'USDT',
+    walletBalance: '7,287.4315 USDT',
+    marginBalance: '5,674.6501 USDT',
+    unrealizedPnl: '-1,612.7813 USDT'
   }
 ];
 

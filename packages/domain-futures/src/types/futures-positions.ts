@@ -20,6 +20,15 @@ export type FuturesPosition = {
   margin: string;
   pnl: string;
   roe: string;
+  autoDeleverage: string;
+  estimatedFundingFee: string;
+};
+
+export type FuturesAssetBalance = {
+  asset: string;
+  walletBalance: string;
+  marginBalance: string;
+  unrealizedPnl: string;
 };
 
 export type FuturesBottomTab = {

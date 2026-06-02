@@ -1,28 +1,23 @@
 import { mockFuturesAccountSummary } from '../../constants/futures-mock-data';
 import { FuturesPanelFrame } from '../workspace/FuturesPanelFrame';
+import { FuturesMarginSummary } from './FuturesMarginSummary';
+import { FuturesWalletSummary } from './FuturesWalletSummary';
 
 export function FuturesAccountPanel() {
   return (
-    <FuturesPanelFrame title="账户">
-      <div className="space-y-3 p-4 text-sm">
-        <div className="flex justify-between">
-          <span className="text-slate-500">保证金比率</span>
-          <span className="text-emerald-400">
-            {mockFuturesAccountSummary.marginRatio}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-slate-500">保证金余额</span>
-          <span className="text-slate-300">
-            {mockFuturesAccountSummary.marginBalance}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-slate-500">未实现盈亏</span>
-          <span className="text-red-400">
-            {mockFuturesAccountSummary.unrealizedPnl}
-          </span>
-        </div>
+    <FuturesPanelFrame
+      title="账户"
+      actions={<span className="text-xs text-yellow-300">切换</span>}
+    >
+      <div className="space-y-3 overflow-y-auto p-4 text-sm">
+        <FuturesMarginSummary account={mockFuturesAccountSummary} />
+        <FuturesWalletSummary account={mockFuturesAccountSummary} />
+        <button
+          type="button"
+          className="w-full rounded-md bg-slate-700 px-3 py-2 text-sm font-semibold text-slate-100"
+        >
+          单币保证金模式
+        </button>
       </div>
     </FuturesPanelFrame>
   );
