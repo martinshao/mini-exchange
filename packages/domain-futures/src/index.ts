@@ -19,5 +19,8 @@ export * from './components/chart/FuturesChartToolbar';
 export * from './components/chart/FuturesDrawingToolbar';
 export * from './components/chart/FuturesChartCanvas';
 export * from './components/chart/FuturesIndicatorPanel';
+export * from './components/order-book/FuturesOrderBookPanel';
+export * from './components/order-book/FuturesOrderBookRows';
+export * from './components/order-book/FuturesDepthControls';
 export * from './constants/futures-mock-data';
 export * from './types';

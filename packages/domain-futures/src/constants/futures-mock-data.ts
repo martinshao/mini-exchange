@@ -86,17 +86,27 @@ export const mockFuturesChart: FuturesChartMockState = {
 
 export const mockFuturesOrderBook: FuturesOrderBook = {
   precision: '0.1',
+  lastPrice: '1,939.02',
+  markPrice: '1,939.16',
   asks: [
-    { price: '1,940.1', quantity: '474.88K', total: '4.12M' },
-    { price: '1,940.0', quantity: '260.46K', total: '3.64M' },
-    { price: '1,939.9', quantity: '336.20K', total: '3.38M' },
-    { price: '1,939.8', quantity: '212.75K', total: '3.04M' }
+    { price: '1,940.1', quantity: '474.88K', total: '4.12M', depthPercent: 92 },
+    { price: '1,940.0', quantity: '260.46K', total: '3.64M', depthPercent: 81 },
+    { price: '1,939.9', quantity: '336.20K', total: '3.38M', depthPercent: 74 },
+    { price: '1,939.8', quantity: '212.75K', total: '3.04M', depthPercent: 68 },
+    { price: '1,939.7', quantity: '792.70K', total: '2.83M', depthPercent: 62 },
+    { price: '1,939.6', quantity: '335.19K', total: '2.04M', depthPercent: 45 },
+    { price: '1,939.5', quantity: '536.42K', total: '1.70M', depthPercent: 38 },
+    { price: '1,939.4', quantity: '240.22K', total: '1.17M', depthPercent: 26 }
   ],
   bids: [
-    { price: '1,939.0', quantity: '72.65K', total: '72.65K' },
-    { price: '1,938.9', quantity: '14.67K', total: '87.32K' },
-    { price: '1,938.8', quantity: '39.60K', total: '126.93K' },
-    { price: '1,938.7', quantity: '303.24K', total: '430.17K' }
+    { price: '1,939.0', quantity: '72.65K', total: '72.65K', depthPercent: 22 },
+    { price: '1,938.9', quantity: '14.67K', total: '87.32K', depthPercent: 28 },
+    { price: '1,938.8', quantity: '39.60K', total: '126.93K', depthPercent: 34 },
+    { price: '1,938.7', quantity: '303.24K', total: '430.17K', depthPercent: 48 },
+    { price: '1,938.6', quantity: '364.88K', total: '795.06K', depthPercent: 56 },
+    { price: '1,938.5', quantity: '257.56K', total: '1.05M', depthPercent: 64 },
+    { price: '1,938.4', quantity: '464.71K', total: '1.51M', depthPercent: 76 },
+    { price: '1,938.3', quantity: '729.38K', total: '2.24M', depthPercent: 88 }
   ]
 };
 

@@ -23,10 +23,13 @@ export type FuturesOrderBookLevel = {
   price: string;
   quantity: string;
   total: string;
+  depthPercent: number;
 };
 
 export type FuturesOrderBook = {
   precision: string;
+  lastPrice: string;
+  markPrice: string;
   asks: FuturesOrderBookLevel[];
   bids: FuturesOrderBookLevel[];
 };
