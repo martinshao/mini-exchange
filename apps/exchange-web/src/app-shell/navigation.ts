@@ -28,8 +28,8 @@ export const mainNavItems: AppNavItem[] = [
   },
   {
     label: 'Markets',
-    href: '/spot',
-    description: 'Market overview'
+    href: '/markets/overview',
+    description: 'Markets overview'
   },
   {
     label: 'Trade',
