@@ -6,3 +6,6 @@ export * from './components/FuturesOrderForm';
 export * from './components/PositionPanel';
 export * from './components/FundingRatePanel';
 export * from './components/LiquidationRiskPanel';
+export * from './components/workspace/FuturesTradingWorkspace';
+export * from './components/workspace/FuturesWorkspaceLayout';
+export * from './components/workspace/FuturesPanelFrame';
