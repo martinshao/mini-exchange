@@ -38,7 +38,7 @@ export function FuturesWorkspaceLayout({
   statusBar: ReactNode;
 }) {
   return (
-    <div className="flex h-[calc(100vh-4rem)] min-h-[760px] flex-col overflow-hidden bg-[#0b0e11] text-slate-100">
+    <div className="futures-workspace flex h-[calc(100vh-4rem)] min-h-[760px] flex-col overflow-hidden bg-[#0b0e11] text-slate-100">
       {ticker}
 
       <div className="flex min-h-0 flex-1 flex-col gap-1 p-1">

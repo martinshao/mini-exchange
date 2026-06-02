@@ -9,7 +9,7 @@ export function FuturesChartToolbar({
 }) {
   return (
     <div className="flex h-10 shrink-0 items-center justify-between gap-4 border-b border-slate-800 px-4 text-xs text-slate-500">
-      <div className="flex items-center gap-4 overflow-x-auto">
+      <div className="futures-workspace-scrollbar flex items-center gap-4 overflow-x-auto">
         {intervals.map((item) => (
           <button
             key={item.label}

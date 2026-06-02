@@ -9,7 +9,7 @@ import { FuturesSubmitButtons } from './FuturesSubmitButtons';
 export function FuturesOrderEntryPanel() {
   return (
     <FuturesPanelFrame title="下单">
-      <div className="space-y-4 overflow-y-auto p-4 text-sm">
+      <div className="futures-workspace-scrollbar space-y-4 overflow-y-auto p-4 text-sm">
         <FuturesMarginControls
           marginMode={mockFuturesOrderEntry.marginMode}
           leverage={mockFuturesOrderEntry.leverage}

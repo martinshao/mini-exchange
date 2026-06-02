@@ -33,7 +33,7 @@ export function FuturesBottomDock() {
   return (
     <FuturesPanelFrame>
       <div className="flex h-full flex-col">
-        <nav className="flex h-11 shrink-0 items-center gap-5 overflow-x-auto border-b border-slate-800 px-4 text-sm font-medium text-slate-500">
+        <nav className="futures-workspace-scrollbar flex h-11 shrink-0 items-center gap-5 overflow-x-auto border-b border-slate-800 px-4 text-sm font-medium text-slate-500">
           {mockFuturesBottomTabs.map((tab) => (
             <button
               key={tab.key}
@@ -45,7 +45,7 @@ export function FuturesBottomDock() {
           ))}
         </nav>
 
-        <div className="min-h-0 flex-1 overflow-auto">
+        <div className="futures-workspace-scrollbar min-h-0 flex-1 overflow-auto">
           {renderDockContent(activeTab.key)}
         </div>
       </div>

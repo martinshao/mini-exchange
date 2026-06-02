@@ -9,7 +9,7 @@ export function FuturesAccountPanel() {
       title="账户"
       actions={<span className="text-xs text-yellow-300">切换</span>}
     >
-      <div className="space-y-3 overflow-y-auto p-4 text-sm">
+      <div className="futures-workspace-scrollbar space-y-3 overflow-y-auto p-4 text-sm">
         <FuturesMarginSummary account={mockFuturesAccountSummary} />
         <FuturesWalletSummary account={mockFuturesAccountSummary} />
         <button

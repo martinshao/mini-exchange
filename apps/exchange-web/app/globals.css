@@ -29,6 +29,93 @@ body {
     sans-serif;
 }
 
+html,
+body {
+  color-scheme: dark;
+  scrollbar-color: #4b5565 #0b0e11;
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #0b0e11 !important;
+}
+
+html::-webkit-scrollbar-track-piece,
+body::-webkit-scrollbar-track-piece {
+  background: #0b0e11 !important;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #4b5565 !important;
+  border: 3px solid #0b0e11;
+  border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: #647084 !important;
+}
+
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  background: #0b0e11 !important;
+}
+
 a {
   text-decoration: none;
+}
+
+.futures-workspace,
+.futures-workspace *,
+.futures-workspace-scrollbar {
+  color-scheme: dark;
+  scrollbar-color: #4b5565 #0b0e11;
+  scrollbar-width: thin;
+}
+
+.futures-workspace::-webkit-scrollbar,
+.futures-workspace *::-webkit-scrollbar,
+.futures-workspace-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.futures-workspace::-webkit-scrollbar-track,
+.futures-workspace *::-webkit-scrollbar-track,
+.futures-workspace-scrollbar::-webkit-scrollbar-track {
+  background: #0b0e11 !important;
+}
+
+.futures-workspace::-webkit-scrollbar-track-piece,
+.futures-workspace *::-webkit-scrollbar-track-piece,
+.futures-workspace-scrollbar::-webkit-scrollbar-track-piece {
+  background: #0b0e11 !important;
+}
+
+.futures-workspace::-webkit-scrollbar-thumb,
+.futures-workspace *::-webkit-scrollbar-thumb,
+.futures-workspace-scrollbar::-webkit-scrollbar-thumb {
+  background: #4b5565 !important;
+  border: 3px solid #0b0e11;
+  border-radius: 999px;
+}
+
+.futures-workspace::-webkit-scrollbar-thumb:hover,
+.futures-workspace *::-webkit-scrollbar-thumb:hover,
+.futures-workspace-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #647084 !important;
+}
+
+.futures-workspace::-webkit-scrollbar-corner,
+.futures-workspace *::-webkit-scrollbar-corner,
+.futures-workspace-scrollbar::-webkit-scrollbar-corner {
+  background: #0b0e11 !important;
 }
