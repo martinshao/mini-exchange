@@ -36,5 +36,8 @@ pnpm-debug.log*
 # coverage
 coverage/
 
+# typescript
+*.tsbuildinfo
+
 # misc
 *.log
