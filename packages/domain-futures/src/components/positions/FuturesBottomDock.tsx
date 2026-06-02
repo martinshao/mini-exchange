@@ -1,4 +1,4 @@
-import { futuresBottomTabs } from '../../constants/futures-workspace-mock';
+import { mockFuturesBottomTabs } from '../../constants/futures-mock-data';
 import { FuturesPanelFrame } from '../workspace/FuturesPanelFrame';
 
 export function FuturesBottomDock() {
@@ -6,12 +6,12 @@ export function FuturesBottomDock() {
     <FuturesPanelFrame>
       <div className="flex h-full flex-col">
         <nav className="flex h-11 shrink-0 items-center gap-5 border-b border-slate-800 px-4 text-sm font-medium text-slate-500">
-          {futuresBottomTabs.map((tab, index) => (
+          {mockFuturesBottomTabs.map((tab, index) => (
             <span
-              key={tab}
+              key={tab.key}
               className={index === 0 ? 'text-slate-100' : undefined}
             >
-              {tab}
+              {tab.count === undefined ? tab.label : `${tab.label}(${tab.count})`}
             </span>
           ))}
         </nav>

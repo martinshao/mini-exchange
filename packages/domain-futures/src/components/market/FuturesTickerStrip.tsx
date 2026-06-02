@@ -1,9 +1,9 @@
-import { futuresTickerStripItems } from '../../constants/futures-workspace-mock';
+import { mockFuturesTickerStrip } from '../../constants/futures-mock-data';
 
 export function FuturesTickerStrip() {
   return (
     <div className="flex h-10 shrink-0 items-center gap-6 overflow-x-auto border-b border-slate-800 bg-[#151922] px-4 text-xs font-semibold">
-      {futuresTickerStripItems.map((item) => {
+      {mockFuturesTickerStrip.map((item) => {
         const isPositive = item.change.startsWith('+');
 
         return (
