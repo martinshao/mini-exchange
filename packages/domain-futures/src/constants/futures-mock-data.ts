@@ -1,6 +1,7 @@
 import type {
   FuturesAccountSummary,
   FuturesBottomTab,
+  FuturesChartMockState,
   FuturesInstrument,
   FuturesOpenOrder,
   FuturesOrderBook,
@@ -40,6 +41,46 @@ export const mockFuturesInstrument: FuturesInstrument = {
     { label: '24h成交量(ETH)', value: '5,354,696.381' },
     { label: '24h成交额(USDT)', value: '10,585,188,533.53' },
     { label: '合约持仓量(USDT)', value: '4,695,985,029.81' }
+  ]
+};
+
+export const mockFuturesChart: FuturesChartMockState = {
+  title: 'ETHUSDT 永续',
+  exchange: 'Binance',
+  timeframe: '1天',
+  latestPrice: '1,939.02',
+  open: '2,006.01',
+  high: '2,006.44',
+  low: '1,924.00',
+  close: '1,939.02',
+  change: '-66.98 (-3.34%)',
+  intervals: [
+    { label: '1分钟' },
+    { label: '5分钟' },
+    { label: '15分钟' },
+    { label: '1小时' },
+    { label: '4小时' },
+    { label: '1天', active: true },
+    { label: '1周' }
+  ],
+  modes: [
+    { label: '基本版' },
+    { label: 'Trading View', active: true },
+    { label: '深度图' }
+  ],
+  drawingTools: [
+    { label: '+' },
+    { label: '线' },
+    { label: '形' },
+    { label: '笔' },
+    { label: '文' },
+    { label: '量' },
+    { label: '磁' }
+  ],
+  indicators: [
+    { label: '成交量(Volume)', value: '3.605M', tone: 'negative' },
+    { label: 'MACD 12 26 close 9', value: '-9.65  -61.21  -70.86', tone: 'muted' },
+    { label: 'RSI 14', value: '26.51', tone: 'muted' }
   ]
 };
 
