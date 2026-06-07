@@ -2,24 +2,41 @@
   "name": "mini-exchange",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@11.1.2",
+  "packageManager": "pnpm@11.5.2+sha512.71c631e382066efc25625d5cf029075de07b61b37f6e27350fbd84b1bda5864c8c1967adc280776b45c30a715c0359a3be08fef42d5bb09e2b99029979692916",
   "scripts": {
-    "dev": "turbo run dev",
     "build": "turbo run build",
-    "lint": "turbo run lint",
-    "typecheck": "turbo run typecheck",
-    "test": "turbo run test",
     "clean": "turbo run clean",
-    "format": "prettier --write ."
+    "dev": "turbo run dev",
+    "format": "prettier --write .",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "sso": "aws sso login --sso-session mini-exchange",
+    "sst:dev": "sst dev --stage dev",
+    "dev:web": "pnpm --filter @mini-exchange/exchange-web dev",
+    "build:web": "pnpm --filter @mini-exchange/exchange-web build",
+    "typecheck:web": "pnpm --filter @mini-exchange/exchange-web typecheck",
+    "deploy:dev": "sst deploy --stage dev",
+    "deploy:prod": "sst deploy --stage production",
+    "remove:dev": "sst remove --stage dev",
+    "aws:sso:new": "aws sso login --profile mini-exchange-new-dev",
+    "aws:whoami:new": "aws sts get-caller-identity --profile mini-exchange-new-dev",
+    "deploy:aws-new": "sst deploy --stage aws-new-dev",
+    "remove:aws-new": "sst remove --stage aws-new-dev"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/aws-lambda": "8.10.162",
     "@types/node": "^25.8.0",
     "eslint": "^10.4.0",
     "prettier": "^3.8.3",
+    "sst": "^4.15.2",
     "turbo": "^2.9.14",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.3",
     "vitest": "^4.1.6"
+  },
+  "dependencies": {
+    "sst": "4.15.2"
   }
 }

@@ -1,0 +1,18 @@
+# .codex/config.toml
+
+[mcp_servers.aws-api]
+command = "/opt/homebrew/bin/uvx"
+args = ["awslabs.aws-api-mcp-server@latest"]
+
+env = { 
+  AWS_REGION = "us-east-1",
+  AWS_API_MCP_PROFILE_NAME = "mini-exchange-new-dev",
+  AWS_API_MCP_WORKING_DIR = "/Users/martinshaw/workspace/private/mini-exchange",
+  AWS_API_MCP_ALLOW_UNRESTRICTED_LOCAL_FILE_ACCESS = "workdir",
+  READ_OPERATIONS_ONLY = "false",
+  REQUIRE_MUTATION_CONSENT = "false"
+}
+
+startup_timeout_sec = 30
+tool_timeout_sec = 300
+required = false

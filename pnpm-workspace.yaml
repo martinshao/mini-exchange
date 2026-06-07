@@ -6,4 +6,7 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
 
+minimumReleaseAgeExclude:
+  - '@types/aws-lambda@8.10.162'
+
 verifyDepsBeforeRun: false

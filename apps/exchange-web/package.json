@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "clean": "rm -rf .next dist coverage",
+    "dev": "next dev",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
     "test": "vitest",
-    "clean": "rm -rf .next dist coverage"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@mini-exchange/api-client": "workspace:*",
