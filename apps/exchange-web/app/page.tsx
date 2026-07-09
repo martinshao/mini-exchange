@@ -3,6 +3,14 @@ import { APP_NAME } from "@mini-exchange/config";
 import { PageContainer } from "@mini-exchange/layout";
 import { AppHeader } from "@/src/app-shell/AppHeader";
 import { marketTickers, productCards } from "@/src/app-shell/navigation";
+import { createPageMetadata, exchangeJsonLd } from "./seo";
+
+export const metadata = createPageMetadata({
+  title: "Crypto Exchange Frontend Architecture Lab",
+  description:
+    "Explore a Next.js crypto exchange frontend lab with spot trading, futures trading, wallets, market data, risk controls and realtime mock streams.",
+  path: "/",
+});
 
 const stats = [
   {
@@ -40,6 +48,10 @@ const featureRows = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#0b0e11] text-slate-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(exchangeJsonLd) }}
+      />
       <AppHeader />
 
       <main>
